@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>style제어</title>
+    <style>
+        .txt-pink{color:pink}
+        .txt-blue{color:blue}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <title>안녕하세요.</title>
+        </header>
+        <main>
+            <div id="box" class="box bg-green">Box</div>
+            <ul id="color">
+                <li id="red">red</li>
+                <li id="green">green</li>
+                <li id="blue">blue</li>
+                <P>DSFESF</P>
+            </ul>
+        </main>
+        <script>
+            const box=document.getElementById('box');
+            box.style.background='red';
+            box.style.width='100px';
+            box.style.height='100px';
+            box.style.color='#fff';
+            box.style["margin-left"]="30px";
+            box.style.textAlign="center"
+
+            const color=document.getElementById('color');
+            color.onclick=function(e){
+                const target=e.target;
+                if(target.tagName !== 'LI') return 
+                target.classList.toggle("txt-blue")
+            }
+        </script>
+    </div>
+</body>
+</html>

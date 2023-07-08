@@ -1,5 +1,5 @@
-const blue=document.getElementById('blue');
-console.log(blue)
+/* const blue=document.getElementById('blue');
+console.log(blue) */
 
 /* blueTextNode.nodeValue='파랑'
 blueTextNode.nodeValue
@@ -30,12 +30,41 @@ const red=document.getElementById('red')
 ul.insertBefore(newLi3,red)
 
 새롭게
-const newLi4=document.createElement('li');
-const newText=document.createTextNode('pink')
-newLi4.appendChild(newText) < pink 집어넣기
+const newLi=document.creatElement('li');
+newLi <-li 태그가 하나 생김
+newLi.innerHTML='pink'
+newLi <로 확인하면 <li>pink</li> 들어온게 보임
 const red=document.getElementById('red')
-ul.insertBefore(blue, newLi4)
-
+red < <li id="red"></li>
+ul.insertBefore(newLi, red) <-red 아이디 위에 pink가 생김
 
 
 */
+
+//삽입
+const blue=document.getElementById('blue');
+console.log(blue)
+
+const ul=document.getElementById('color');
+console.log(ul)
+function insertAfter(newNode, existingNode) {
+    existingNode.parentNode.insertBefore(newNode, existingNode.nextSibling);
+}
+const newLi=document.createElement('li');
+/* const newLi1=document.createElement('li');
+ */const textNode=document.createTextNode('black');
+/* const textNode1=document.createTextNode('yellow'); */
+newLi.appendChild(textNode);
+/* newLi1.appendChild(textNode1); */
+const red=document.getElementById('green');
+insertAfter(newLi, ul.lastElementChild)
+/* ul.insertAfter(newLi1, red) */
+
+//복제
+const newYellow=newLi.cloneNode(true);
+console.log(newYellow)
+ul.appendChild(newYellow)
+
+//삭제
+ul.removeChild(newYellow);
+ul.removeChild(red);
