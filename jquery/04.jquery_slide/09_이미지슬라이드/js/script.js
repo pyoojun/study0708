@@ -12,11 +12,11 @@ function slide(){
         prevBtn.removeClass('on')
         current++;
         console.log(current)
-        if(current==banner.length) current=0;
+        if(current==banner.size()) current=0;
         let next=banner.eq(current)
-        let nextBtn=btn.eq(current)
-        nextBtn.addClass('on')
+        let nextBtn=btn.eq(current)        
         move(next, '100%', 0)
+        nextBtn.addClass('on')
     },2000)
 }
 
