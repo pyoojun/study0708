@@ -36,7 +36,14 @@ const userList=[
     }
 ]
 
-const newUserList=userList.map((user) => {
-    userId:user.userId
+/* let newUserList=userList.map(u => ({
+    userId:u.userId,
+    address: u.address
+}))
+console.log(newUserList) */
+
+/* let newUserList = userList.map(funtion(u){
+    return `${u.firstName}` `${u.lastName}`
 })
-console.log(newUserList)
+console.log(newUserList) */
+
